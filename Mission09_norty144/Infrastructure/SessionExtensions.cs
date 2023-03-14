@@ -9,6 +9,7 @@ namespace Mission09_norty144.Infrastructure
 {
     public static class SessionExtensions
     {
+        //using JsonSerializer for serialization of the sessions
         public static void SetJson (this ISession session, string key, object value)
         {
             session.SetString(key, JsonSerializer.Serialize(value));

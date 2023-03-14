@@ -20,5 +20,6 @@ namespace Mission09_norty144.Models
         }
 
         public DbSet<Book> Books { get; set; }
+        public DbSet<Checkout> Checkouts { get; set; }
     }
 }

@@ -12,6 +12,7 @@ namespace Mission09_norty144.Controllers
     {
         private IBookstoreRepository repo;
 
+        //setting repo = to temp 
         public HomeController (IBookstoreRepository temp)
         {
             repo = temp;
@@ -22,6 +23,7 @@ namespace Mission09_norty144.Controllers
 
             var x = new BooksViewModel
             {
+                //home controller to show the books and their info
                 Books = repo.Books
                 .Where(b => b.Category == bookCategory || bookCategory == null)
                 .OrderBy(b => b.Author)
